@@ -1,0 +1,160 @@
+/* 基本設定 */
+:root {
+    --primary-color: #2c3e50; /* 濃い青灰色 */
+    --secondary-color: #3498db; /* 明るい青 */
+    --background-color: #f4f4f9; /* 薄い灰色 */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --container-bg: #fff;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+/* メインコンテンツ */
+main.container {
+    background-color: var(--container-bg);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* スキル */
+#skills h3 {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* 職務経歴 */
+.job {
+    margin-bottom: 25px;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job h3 {
+    font-size: 1.3em;
+    color: var(--text-color);
+}
+
+.job .job-title {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+/* 連絡先 */
+#contact ul {
+    list-style: none;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-size: 0.9em;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
